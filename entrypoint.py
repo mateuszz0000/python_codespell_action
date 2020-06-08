@@ -82,7 +82,11 @@ def main():
     word_regex = re.compile(word_regex_def)
     misspellings = setup_dict()
     fixes = check_spelling(pfiles, misspellings, word_regex)
-    print(fixes)
+    print("pfiles", pfiles)
+    print("word_regex", word_regex)
+    print("MISSPELS", misspellings)
+    print("FIXES", fixes)
+    print("CONF", conf)
     comment_pr(fixes, conf, gh_token)
     return 0
 
