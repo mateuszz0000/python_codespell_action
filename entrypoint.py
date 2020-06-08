@@ -83,6 +83,7 @@ def main():
     word_regex = re.compile(word_regex_def)
     misspellings = setup_dict()
     fixes = check_spelling(pfiles, misspellings, word_regex)
+    print(misspellings)
     comment_pr(fixes, conf, gh_token)
     return 0
 
